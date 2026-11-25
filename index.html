@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>ふくむら歯科 ロゴ提案3案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Serif+JP:wght@500;600&family=Noto+Sans+JP:wght@400;500;700&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--marine:#0b5e8e;--aqua:#4fb3d9;--ink:#1d2a33;--sub:#5b6b76;--line:#e3e9ee;--bg:#f6f8fa}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);line-height:1.8}
+  header{background:#fff;border-bottom:1px solid var(--line);padding:40px 20px 32px;text-align:center}
+  header p.eyebrow{margin:0;font-size:12px;letter-spacing:.2em;color:var(--sub)}
+  header h1{margin:8px 0 12px;font-size:22px;font-weight:700}
+  header p.lead{margin:0 auto;max-width:640px;font-size:14px;color:var(--sub);text-align:left}
+  main{max-width:960px;margin:0 auto;padding:24px 16px 64px}
+  section.plan{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px 20px;margin:24px 0}
+  .plan h2{margin:0;font-size:18px}
+  .plan h2 span{display:inline-block;background:var(--marine);color:#fff;font-size:12px;padding:2px 10px;border-radius:99px;margin-right:8px;vertical-align:2px}
+  .plan p.note{font-size:14px;color:var(--sub);margin:8px 0 20px}
+  .main-logo{display:flex;justify-content:center;padding:28px 8px;border:1px dashed var(--line);border-radius:8px}
+  .main-logo svg{width:100%;max-width:520px;height:auto}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+  .tile{border:1px solid var(--line);border-radius:8px;padding:12px;text-align:center}
+  .tile .cap{font-size:12px;color:var(--sub);margin-top:8px}
+  .tile.dark{background:var(--marine)}
+  .tile.dark .cap{color:#d6e8f2}
+  .tile svg{width:100%;height:auto;display:block}
+  .card{aspect-ratio:91/55;background:#fff;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.15);position:relative;overflow:hidden;text-align:left}
+  .card svg{position:absolute}
+  .small-row{display:flex;align-items:flex-end;justify-content:center;gap:18px;padding:14px 0 4px}
+  .small-row div{display:flex;flex-direction:column;align-items:center;font-size:11px;color:var(--sub)}
+  .sign{background:#fff;border:6px solid #cfd6db;border-radius:4px;padding:10px}
+  footer{max-width:960px;margin:0 auto;padding:0 16px 48px;font-size:13px;color:var(--sub)}
+  footer ul{padding-left:1.2em}
+</style>
+</head>
+<body>
+<header>
+  <p class="eyebrow">LOGO PROPOSAL</p>
+  <h1>大船ふくむら歯科様 ロゴ提案3案</h1>
+  <p class="lead">頭文字のFを基点に、歯ブラシ、歯、船の3方向から起こしました。3案ともマリンブルーを主色にし、外看板から診察券、ホームページのタブに出る小さなアイコンまで同じ形で使えるよう組んでいます。各案の下に、白抜き1色版と使用イメージを並べています。</p>
+</header>
+<main id="plans"></main>
+<footer>
+  <p>3案共通の設計</p>
+  <ul>
+    <li>いちばん細い部分をマークの高さの5%以上に固定（診察券や封筒の小さな印刷でも線が飛ばない太さ）</li>
+    <li>1色でも成立する形（看板の切り文字、院内掲示のコピー、ゴム印でも崩れない）</li>
+    <li>医院名は「ふくむら歯科」と英字表記の2段。大船と法人名は入れていません</li>
+    <li>書体はご提案用の仮です。納品時は文字をアウトライン化し、フォントのない環境でも同じ形で表示されます</li>
+  </ul>
+  <p>これは提案用の試作です。</p>
+</footer>
+<script>
+const M='#0b5e8e', A='#4fb3d9';
+
+// ---- マーク（viewBox 0 0 120 120） ----
+const marks = {
+  // A: 歯ブラシのF（縦棒=柄、上の横棒=ヘッド、毛先が上に立つ）
+  A:(c1,c2)=>`
+    <rect x="34" y="30" width="15" height="80" rx="7.5" fill="${c1}"/>
+    <rect x="34" y="30" width="58" height="15" rx="7.5" fill="${c1}"/>
+    <rect x="34" y="62" width="40" height="13" rx="6.5" fill="${c1}"/>
+    <g fill="${c2}">
+      <rect x="56" y="12" width="8.5" height="14" rx="4.25"/>
+      <rect x="68" y="10" width="8.5" height="16" rx="4.25"/>
+      <rect x="80" y="12" width="8.5" height="14" rx="4.25"/>
+    </g>`,
+  // B: 歯のF（歯の形をFで白く抜く）
+  B:(c1,c2,bg='#fff')=>`
+    <path d="M60 22 C70 13 94 12 96 34 C98 52 90 62 87 82 C84 102 78 110 72 110 C64 110 66 86 60 86 C54 86 56 110 48 110 C42 110 36 102 33 82 C30 62 22 52 24 34 C26 12 50 13 60 22 Z" fill="${c1}"/>
+    <g fill="${bg}">
+      <rect x="47" y="34" width="10" height="44" rx="2"/>
+      <rect x="47" y="34" width="30" height="10" rx="2"/>
+      <rect x="47" y="53" width="22" height="9" rx="2"/>
+    </g>
+    <path d="M78 26 C86 27 89 33 89 39" fill="none" stroke="${c2}" stroke-width="6" stroke-linecap="round"/>`,
+  // C: 帆船のF（縦棒=マスト、横棒=帆、下に笑顔の弧=船体と口元）
+  C:(c1,c2)=>`
+    <rect x="44" y="12" width="10" height="80" rx="5" fill="${c1}"/>
+    <path d="M57 14 L96 14 Q84 26 57 36 Z" fill="${c1}" stroke="${c1}" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M57 46 L84 46 Q76 56 57 63 Z" fill="${c1}" stroke="${c1}" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M22 96 Q60 120 98 96" fill="none" stroke="${c2}" stroke-width="9" stroke-linecap="round"/>`
+};
+
+const fonts = {
+  A:{jp:'"Zen Maru Gothic"',jpw:700,ls:2},
+  B:{jp:'"Noto Serif JP"',jpw:600,ls:3},
+  C:{jp:'"Noto Sans JP"',jpw:500,ls:3},
+};
+
+// 横組み（マーク＋文字）
+function horiz(k,{c1=M,c2=A,txt='#1d2a33',sub='#5b6b76',bg='#fff'}={}){
+  const f=fonts[k];
+  return `<svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ふくむら歯科 ${k}案">
+    <svg x="0" y="10" width="120" height="120" viewBox="0 0 120 120">${marks[k](c1,c2,bg)}</svg>
+    <text x="140" y="80" font-family='${f.jp},sans-serif' font-weight="${f.jpw}" font-size="50" letter-spacing="${f.ls}" fill="${txt}">ふくむら歯科</text>
+    <text x="143" y="112" font-family="Montserrat,sans-serif" font-weight="500" font-size="15" letter-spacing="4.2" fill="${sub}">FUKUMURA DENTAL CLINIC</text>
+  </svg>`;
+}
+// 縦組み（マーク上・文字下）
+function stack(k,{c1=M,c2=A,txt='#1d2a33',sub='#5b6b76',bg='#fff'}={}){
+  const f=fonts[k];
+  return `<svg viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
+    <svg x="100" y="6" width="100" height="100" viewBox="0 0 120 120">${marks[k](c1,c2,bg)}</svg>
+    <text x="150" y="168" text-anchor="middle" font-family='${f.jp},sans-serif' font-weight="${f.jpw}" font-size="40" letter-spacing="${f.ls}" fill="${txt}">ふくむら歯科</text>
+    <text x="150" y="200" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="500" font-size="12" letter-spacing="3.4" fill="${sub}">FUKUMURA DENTAL CLINIC</text>
+  </svg>`;
+}
+function markOnly(k,size,{c1=M,c2=A,bg='#fff'}={}){
+  return `<svg width="${size}" height="${size}" viewBox="0 0 120 120">${marks[k](c1,c2,bg)}</svg>`;
+}
+
+const plans=[
+  {k:'A',name:'歯ブラシのF',note:'Fの縦棒を歯ブラシの柄に、上の横棒をヘッドにして、毛先を3本立てました。ご提示いただいた文字と歯ブラシの一体化をそのまま形にした案です。毛先だけ明るい水色にしており、一目で歯科とわかります。書体は角の丸いゴシックで、親しみやすさを優先しました。'},
+  {k:'B',name:'歯のF',note:'歯の形そのものの中に、Fを白く抜きました。遠目には歯、近くで見るとFと読める二重の形です。右上の弧は歯の艶で、清潔感を足しています。書体は参考の宇土歯科様に近い明朝体にし、開院50年の信頼感と落ち着きを出しました。'},
+  {k:'C',name:'船のF',note:'Fの縦棒をマスト、2本の横棒を帆にした帆船です。法人名FLTの船団の意味を汲みました。下の弧は船体であり、同時に口元の笑顔にも見えるように置いています。3案の中でいちばん抽象度が高く、歯科らしさは文字で補う設計です。書体は癖のないゴシックで、30代40代に向けた洗練を狙いました。'},
+];
+
+const root=document.getElementById('plans');
+plans.forEach(p=>{
+  const k=p.k;
+  const white={c1:'#fff',c2:'#fff',txt:'#fff',sub:'#d6e8f2',bg:M};
+  root.insertAdjacentHTML('beforeend',`
+  <section class="plan">
+    <h2><span>${k}案</span>${p.name}</h2>
+    <p class="note">${p.note}</p>
+    <div class="main-logo">${horiz(k)}</div>
+    <div class="grid">
+      <div class="tile">${stack(k)}<div class="cap">縦組み</div></div>
+      <div class="tile dark">${stack(k,white)}<div class="cap">白抜き1色</div></div>
+      <div class="tile">${stack(k,{c1:'#1d2a33',c2:'#1d2a33',txt:'#1d2a33',sub:'#1d2a33'})}<div class="cap">黒1色（ゴム印・FAX）</div></div>
+    </div>
+    <div class="grid">
+      <div class="tile">
+        <div class="card">
+          <svg viewBox="0 0 520 140" style="left:7%;top:12%;width:62%">${horiz(k).replace(/^<svg[^>]*>/,'').replace(/<\/svg>\s*$/,'')}</svg>
+          <div style="position:absolute;left:8%;bottom:10%;font-size:9px;color:#5b6b76;line-height:1.5">診察券<br>お名前 ＿＿＿＿＿＿＿</div>
+          <div style="position:absolute;right:0;top:0;bottom:0;width:6%;background:${M}"></div>
+        </div>
+        <div class="cap">診察券（実寸比 91×55mm）</div>
+      </div>
+      <div class="tile">
+        <div class="sign" style="background:${M}">${horiz(k,white)}</div>
+        <div class="cap">外看板（紺地に白）</div>
+      </div>
+      <div class="tile">
+        <div class="small-row">
+          <div>${markOnly(k,64)}64px</div>
+          <div>${markOnly(k,32)}32px</div>
+          <div>${markOnly(k,16)}16px</div>
+        </div>
+        <div class="cap">ホームページのタブ・SNSアイコン</div>
+      </div>
+    </div>
+  </section>`);
+});
+</script>
+</body>
+</html>
